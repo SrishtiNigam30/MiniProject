@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <div id="whole">
+  <br><h1><img src="assets/Images/phonebook.jpg">
+  <strong>    Phone Book App</strong></h1><br>
+  <div id="whole">
+      <p id="cont"><strong>Contacts</strong>
+      <button class="btn btn-primary" (click)="newadd()">+Add Contact</button></p>
+      <input type="text" placeholder="Search for contact by last name..." id="searchbar" >
+      <ul *ngFor="let data of details | filter: searchText">
+  <li>{{data}}</li>
+</ul>
+  </div>
+
+  <section>
+    <div id="ctsnames" *ngFor="let det of details">
+        <strong>{{det.firstname}} {{det.lastname}}</strong><br/>
+        {{det.phonenumber}}
+        <button type="button" class="btn btn-danger" id="del" (click)="delcon(det)">
+          <span class="glyphicon glyphicon-trash"></span> 
+        </button>
+        <hr>
+    </div>
+</section>
+<div id = "form1" style = "display:none">
+<section class="alert alert-success">
+    <label for="txtName">First Name</label>
+    <input type="text" [(ngModel)]="detail.fname">
+    <br/>
+    <label for="txtName">Last Name</label>
+    <input type="text" [(ngModel)]="detail.nname">
+    <br/>
+    <label for="txtName">Phone number</label>
+    <input type="text" [(ngModel)]="detail.phn">
+    <br/>
+    <button (click)="displayDetails()" class="btn btn-danger">Store Movie</button>
+    <button (click)="sortcontact()" class="btn btn-success-lg">Sort by Number</button>
+    <button (click)="sortfirstname()" class="btn btn-success-lg">Sort by Number</button>
+    <button (click)="sortlastname()" class="btn btn-success-lg">Sort by Number</button>
+</section>
+</div>
+</div>

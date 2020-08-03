@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#whole{
+  background-color:#F2F3F4;
+}
+.btn1 {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: RoyalBlue;
+}
+#demo{
+  background-color:red;
+}
+#ctsnames{
+  background-color: white;
+  border: black;
+}
+div{
+    background-color: white;
+}
+#cont{
+  font-size: x-large;
+}
+img{
+  width:75px;
+  height:75px;
+  float:center;
+}
+button{
+  float: right;
+}
+#searchbar {
+  background-image: url('assets/Images/search.png');
+  width: 1450px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+}
